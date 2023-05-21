@@ -879,11 +879,28 @@ button {
 
 
 /* ============== MODAL WINDOWS ================*/
-/* ========== MODAL YOUR ORDER ===========*/
-
-.modal-order {
+.overlay {
     opacity: 0;
     visibility: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    transition: opacity var(--transition), visibility var(--transition);
+}
+.modal {
+    opacity: 0;
+    visibility: hidden;
+}
+/* ========== MODAL YOUR ORDER ===========*/
+
+
+.modal-order {
+    
 
     width: 100%;
     max-width: 600px;
@@ -915,26 +932,8 @@ button {
 /* ========== /MODAL YOUR ORDER ===========*/
 
 /* ========== MODAL THANK YOU ===========*/
-.overlay {
-
-    /* Скрываем подложку  */
-    opacity: 0;
-    visibility: hidden;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 20;
-    transition: opacity var(--transition), visibility var(--transition);
-}
 
 .modal-thank {
-    opacity: 0;
-    visibility: hidden;
-
     width: 100%;
     max-width: 600px;
     position: fixed;

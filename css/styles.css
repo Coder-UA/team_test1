@@ -758,6 +758,11 @@ button {
     opacity: 0.5;
     color: white;
     
+    
+}
+.contacts-form-email:focus,
+.contacts-form-email:active {
+    outline: 3px solid #ffffff7c;
 }
 .contacts-form-email::placeholder {
     font-style: normal;

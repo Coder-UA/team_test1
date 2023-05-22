@@ -342,7 +342,47 @@
                     <use href="./img/sprite.svg#icon-x-btn"></use>
                 </svg>
             </button>
-            <p>fasfasafsafsafsasfasfafsafsasfsafasf</p>
+            <form class="modal-order-form">
+                <h2 class="modal-order-h2">YOUR ORDER</h2>
+                <ul class="form-list list">
+                    <li class="form-list-item">
+                        <input class="form-list-item-check" type="checkbox" id="check1" name="basket" value="strawberry_basket">
+                        <label class="form-list-check" for="check1">
+                            <p class="form-list-check-main">Strawberry Basket</p>
+                            <p class="form-list-check-descript">Plant</p>
+                            <img class="form-list-check-img" src="./img/modal/order-check1.png" alt="Strawberry Basket">
+                        </label>
+                    </li>
+                    <li class="form-list-item">
+                        <input class="form-list-item-check" type="checkbox" id="check2" name="basket" value="apple_basket">
+                        <label class="form-list-check" for="check2">
+                            <p class="form-list-check-main">Apple Basket</p>
+                            <p class="form-list-check-descript">Plant</p>
+                            <img class="form-list-check-img" src="./img/modal/order-check2.png" alt="Apple Basket">
+                        </label>
+                    </li>
+                    <li class="form-list-item">
+                        <input class="form-list-item-check" type="checkbox" id="check3" name="basket" value="fruits_basket">
+                        <label class="form-list-check" for="check3">
+                            <p class="form-list-check-main">Fruits Basket</p>
+                            <p class="form-list-check-descript">Plant</p>
+                            <img class="form-list-check-img" src="./img/modal/order-check3.png" alt="Fruits Basket">
+                        </label>
+                    </li>
+                </ul>
+                <div class="modal-order-form-info">
+                    <input class="modal-order-form-info-data" type="text" name="user_name" required placeholder="Enter full name..." pattern="^[a-zA-Zа-яА-ЯіІїЇ]+$" minlength="3" >
+                    <input class="modal-order-form-info-data" type="email" name="user_email" required placeholder="Enter email...">
+                    <input class="modal-order-form-info-data" type="text" name="user_card" required  title="xxxx-xxxx-xxxx-xxxx" placeholder="Enter card..." pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"></input>
+                    <textarea  class="modal-order-form-info-text" name="user_message" placeholder="Enter comments..."></textarea>
+                </div>
+                <button type="submit" class="modal-order-form-button_submit">Submit</button>
+            </form>
+                
+
+
+
+            
         </div>
     </div>
         <!-- MODAL THANK YOU -->
@@ -354,7 +394,7 @@
                 </svg>
             </button>
             <img class="modal-thank-img" src="./img/modal/thank-img.png" alt="raspberry">
-            <p class="modal-thank-main-p">Thank you</p>
+            <h2 class="modal-thank-main-h2">Thank you</h2>
             <p class="modal-thank-descript-p">Thank you for your order! Our team is preparing your box with fresh, delicious
                 fruits and vegetables, and we'll deliver
                 it straight to your doorstep. We appreciate your business and look forward to providing you with the best

@@ -138,7 +138,9 @@ button {
     background-color: var(--background-main-color);
 }
 .hero-container {
-    
+    background-repeat: no-repeat;
+    background-image: url(../img/Hero/bg-banana.png),url(../img/Hero/bg-strawberry.png);
+    background-position: 205px 190px,930px 35px;
     position: relative;
 }
 .hero-h1 {
@@ -253,6 +255,12 @@ button {
     flex-direction: column;
     z-index: 1;
 }
+.hero-block2-img {
+    padding: 13px 12px;
+    background: linear-gradient(to top,rgb(174,19,50) 0%,rgba(174,19,50,1) 70%,rgba(174,19,50,0)30%) padding-box,linear-gradient(to top,rgb(255,255,255) 0%,rgba(255,255,255,.441769) 30%,rgba(255,255,255,0) 70%) border-box;
+    border: 1px solid transparent;
+    border-radius: 500px;
+}
 
 .hero-block2-button {
     left: 0;
@@ -351,27 +359,6 @@ button {
     text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
     border: 1px solid;
     border-radius: 1000px;
-}
-/* BG IMG */
-.hero-bg-banana {
-    position: absolute;
-    z-index: 0;
-    top: 191px;
-    left: 205px;
-}
-
-.hero-bg-strawberry {
-    position: absolute;
-    z-index: 0;
-    top: 20px;
-    right: 215px;
-}
-.hero-bg-photo {
-    position: absolute;
-    z-index: 0;
-    top: 102px;
-    left: 397px;
-
 }
 /* ============== /HERO ================*/
 
@@ -626,31 +613,31 @@ button {
     letter-spacing: -0.04em;
     color: #AE1332;
 }
-.fruits-list-item1 {
+.fruits-list-item:nth-child(1) {
     background: #F8766B;
 }
-.fruits-list-item2 {
+.fruits-list-item:nth-child(2) {
     background: #EDD251;
 }
-.fruits-list-item3 {
+.fruits-list-item:nth-child(3) {
     background: #9DC262;
 }
-.fruits-list-item4 {
+.fruits-list-item:nth-child(4) {
     background: #BFD663;
 }
-.fruits-list-item5 {
+.fruits-list-item:nth-child(5) {
     background: #E93F29;
 }
-.fruits-list-item6 {
+.fruits-list-item:nth-child(6) {
     background: #DB4F4B;
 }
-.fruits-list-item7{ 
+.fruits-list-item:nth-child(7){ 
     background: #9B5366;
 }
-.fruits-list-item8 {
+.fruits-list-item:nth-child(8) {
     background: #F47F4C;
 }
-.fruits-list-item9 {
+.fruits-list-item:nth-child(9) {
     background: #98B37E;
 }
 
@@ -911,12 +898,11 @@ button {
 
     width: 100%;
     max-width: 891px;
-    min-height: 911px;
+    max-height: 930px;
     position: fixed;
     top: 5px;
     left: 0px;
     right: 0px;
-    bottom: 5px;
     margin-left: auto;
     margin-right: auto;
     z-index: 25;

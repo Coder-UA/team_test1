@@ -51,6 +51,34 @@ button {
 }
 
 .container {
+    width:100%;
+    padding-left: 20px;
+    padding-right: 20px;
+   
+}
+@media screen and (min-width:375px) {
+    .container {
+        width: 375px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+@media screen and (min-width:768px) {
+    .container {
+        width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+}
+
+@media screen and (min-width:1280px) {
+    .container {
+            width: 1280px;
+        }
+}
+/* .container {
     padding-left: 32px;
     padding-right: 32px;
     width: 1280px;
@@ -58,7 +86,7 @@ button {
     margin-right: auto;
 
 
-}
+} */
 /* ============== COMPONENTS ================*/
 .list {
     list-style: none;
@@ -78,6 +106,7 @@ button {
     align-items: center;
     position: relative;
 }
+
 .nav {
     display: flex;
     column-gap: 322px;
@@ -85,10 +114,7 @@ button {
 
 .menu-list {
     display: flex;
-    column-gap: 20px;
-}
-.menu-list-item {
-
+    
 }
 .menu-list-item-link {
     font-style: normal;
@@ -102,13 +128,13 @@ button {
 
     color: #AE1332;
 }
-
 .logo {
     display: flex;
     align-items: center;
     column-gap: 8px;
     fill: var(--text-color-white-bg);
 }
+
 .logo-text {
     font-style: normal;
     font-weight: 700;
@@ -120,7 +146,7 @@ button {
     letter-spacing: -0.04em;
     text-transform: uppercase;
     color: var(--text-color-white-bg);
-    
+
 }
 
 
@@ -128,8 +154,119 @@ button {
     text-decoration: none;
     border: none;
     background: transparent;
-    fill:var(--text-color-white-bg);
+    fill: var(--text-color-white-bg);
 }
+/* mob menu */
+.mob-menu-btn {
+    background-color: transparent;
+    border:none;
+    padding: 0;
+    fill: #AE1332;
+    line-height: 0;
+}
+
+.mob-menu {
+    display: flex;
+    flex-direction:column;
+    
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: 1000;
+    background-color: #AE1332;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 500ms linear, visibility 500ms linear ;
+}
+.mob-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.mob-menu-header {
+    display: flex;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 16px 20px;
+    justify-content: space-between;
+}
+
+.mob-menu-header-btn_close {
+    background-color: transparent;
+    border:none;
+    padding: 0;
+    fill: #AE1332;
+    line-height: 0;
+}
+
+
+.mob-menu-list {
+    margin-top: 124px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+}
+.mob-menu-list-item {
+    display: flex;
+    justify-content: center;
+}
+.mob-menu-list-item-a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.29em;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+}
+
+.mob-menu-shop {
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    fill: white;
+}
+
+/* 0px - 767px */
+@media screen and (max-width:767px) {
+    .menu-list {
+        display: none;
+    }
+    .shop {
+        display: none;
+    }
+
+}
+/* 375 px - */
+@media screen and (min-width:375px) {
+    
+}
+/* 768 px - */
+@media screen and (min-width:768px) {
+    .mob-menu-btn {
+        display: none;
+    }
+    .nav {
+        column-gap: 94px;
+    }
+    .menu-list {
+        column-gap: 16px;
+    }
+}
+/* 1280px - */
+@media screen and (min-width:1280px) {
+    .nav {
+            column-gap: 322px;
+        }
+    .menu-list {
+        column-gap: 20px;
+    }    
+}
+
 /* ============== /HEADER ================*/
 
 
@@ -137,16 +274,18 @@ button {
 .hero {
     background-color: var(--background-main-color);
 }
+
 .hero-container {
     background-repeat: no-repeat;
-    background-image: url(../img/Hero/bg-banana.png),url(../img/Hero/bg-strawberry.png);
-    background-position: 205px 190px,930px 35px;
+    background-image: url(../img/Hero/bg-banana-mob.png), url(../img/Hero/bg-strawberry-mob.png);
+    background-position: top 107px left 13px,top 51px right 20px;
     position: relative;
+    background-size: 66px 44px, 56px 56px;
+    padding-bottom: 80px;
 }
 .hero-h1 {
     position: absolute;
-    width: 898px;
-    height: 198px;
+    height: 118px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -156,7 +295,7 @@ button {
 
     font-style: normal;
     font-weight: 500;
-    font-size: 64px;
+    font-size: 28px;
     line-height: 1em;
     display: flex;
     align-items: center;
@@ -165,26 +304,23 @@ button {
     text-transform: uppercase;
     color: #FFFFFF;
     text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
-    
+
 }
+
 .hero-main-block {
     display: flex;
-    column-gap: 103px;
     position: relative;
-    
+    flex-direction: column;
+    grid-gap: 44px;
 }
-
 .hero-block1 {
-        margin-top: 408px;
-        display: flex;
-        flex-direction: column;
-        grid-gap: 44px;
-        margin-left: 30px;
+    margin-top: 408px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 44px;
+    margin-left: 30px;
 }
-
 .hero-block1-text {
-    width: 222px;
-
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -198,18 +334,12 @@ button {
     text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
 }
 
-.hero-block1-list {
-    display: flex;
-    flex-direction: column;
-    grid-gap: 44px;
-   
-}
 .hero-block1-block {
     background: #A4CB66;
     border-radius: 500px;
     width: 249px;
     height: 387px;
-    
+
 
 }
 .hero-block1-block-main_text {
@@ -225,16 +355,18 @@ button {
     text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
 }
 .hero-block1-block-img {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 61px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 61px;
+
 }
+
 .hero-block1-block-description_text {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.17em;
-    
+
     text-align: center;
     letter-spacing: -0.04em;
     text-transform: uppercase;
@@ -247,28 +379,28 @@ button {
     margin-top: 2px;
 }
 
-
 .hero-block2 {
-    margin-top: 122px;
     position: relative;
     display: flex;
     flex-direction: column;
     z-index: 1;
 }
+
 .hero-block2-img {
+    height: 484px;
     padding: 13px 12px;
-    background: linear-gradient(to top,rgb(174,19,50) 0%,rgba(174,19,50,1) 70%,rgba(174,19,50,0)30%) padding-box,linear-gradient(to top,rgb(255,255,255) 0%,rgba(255,255,255,.441769) 30%,rgba(255,255,255,0) 70%) border-box;
+    background: linear-gradient(to top, rgb(174, 19, 50) 0%, rgba(174, 19, 50, 1) 70%, rgba(174, 19, 50, 0)30%) padding-box, linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, .441769) 30%, rgba(255, 255, 255, 0) 70%) border-box;
     border: 1px solid transparent;
     border-radius: 500px;
+    width: 100%;
+
 }
 
 .hero-block2-button {
     left: 0;
     right: 0px;
+    top:0;
     position: absolute;
-    width: 114px;
-    height: 114px;
-    top: 625px;
     margin: 0 auto;
     text-decoration: none;
     border: none;
@@ -276,7 +408,6 @@ button {
     border-radius: 50%;
     font-style: normal;
     font-weight: 500;
-    font-size: 28px;
     line-height: 1em;
     display: flex;
     align-items: center;
@@ -287,17 +418,18 @@ button {
     text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
     transform: rotate(-14deg);
 }
+
 .hero-block2-button:hover,
 .hero-block2-button:focus {
-    color:rgba(164, 203, 102, 1);
+    color: rgba(164, 203, 102, 1);
 }
 
 .hero-block3 {
     display: flex;
-    flex-direction: column;
     grid-gap: 44px;
     margin-top: 336px;
 }
+
 .hero-block3-block {
     width: 249px;
     height: 387px;
@@ -316,6 +448,7 @@ button {
     text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
     margin-top: 24px;
 }
+
 .hero-block3-block-img {
     margin-left: auto;
     margin-right: auto;
@@ -323,7 +456,7 @@ button {
 }
 
 .hero-block3-block-description_text {
-    margin-top:17px;
+    margin-top: 17px;
     width: 163px;
     font-style: normal;
     font-weight: 500;
@@ -346,6 +479,7 @@ button {
     flex-direction: row-reverse;
     margin-right: 10px;
 }
+
 .hero-block3-list-item-h3 {
     padding: 12px 32px;
     font-style: normal;
@@ -360,6 +494,192 @@ button {
     border: 1px solid;
     border-radius: 1000px;
 }
+
+
+/* 0px - 767px */
+@media screen and (max-width:767px) {
+    .hero-main-block {
+        align-items: center;
+    }
+    .hero-h1 {
+        max-width: 335px;
+    }
+    .hero-block1 {
+            margin-top: 0;
+            margin-left: 0;
+            order:2;
+            align-items: center;
+        }
+    .hero-block1-text {
+        width: 279px;
+        }
+    .hero-block2 {
+        margin-top: 102px;
+        order:1;
+    }
+
+    .hero-block2-button {
+        width: 80px;
+        height: 80px;
+        top: 425px;
+        font-size: 20px;
+    }
+    .hero-block3 {
+        flex-direction: column-reverse;
+        order:3;
+        margin:0;
+        align-items: center;
+    }
+    .hero-block3-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        flex-direction: row-reverse;
+        margin-right: 10px;
+        justify-content: center;
+    }
+    .hero-block3-list-item {
+        width: 132px;
+    }
+    .hero-block3-list-item-h3 {
+        padding: 12px 0;
+    }
+}
+    
+
+@media screen and (min-device-pixel-ratio: 2),
+screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx) {
+    .hero-container {
+        background-image: url(../img/Hero/bg-banana-mob@2x.png), url(../img/Hero/bg-strawberry-mob@2x.png);
+    }
+}
+/* 768 px - */
+@media screen and (min-width:768px) {
+    .hero-container {
+            background-image: url(../img/Hero/bg-banana-tablet.png), url(../img/Hero/bg-strawberry-tablet.png);
+            background-size: 132px 90px, 108px 108px;
+            background-position: 27px 169px,623px 55px;
+            padding-bottom: 137px;
+        }
+    .hero-h1 {
+        width: 704px;
+        height: 168px;
+        font-size: 50px;
+        line-height: 1.08em;
+
+    }
+    .hero-main-block {
+        display: flex;
+        flex-direction: row;
+        grid-gap: 50px;
+        column-gap: 117px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-block1 {
+        margin-top: 0;
+        order:2;
+    }
+    .hero-block1-block {
+        margin-left: 30px;
+    }
+    .hero-block1-text {
+        width: 279px;
+    }
+
+     .hero-block2 {
+        margin-top: 112px;
+        order: 1;
+    }
+    .hero-block2-img {
+        height: 702px;
+    }
+
+    .hero-block2-button {
+        width: 114px;
+        height: 114px;
+        top: 605px;
+        font-size: 28px;
+    }
+    .hero-block3 {
+        flex-direction: column;
+        margin:0;
+        order: 3;
+        
+    }
+    .hero-block3-list { 
+        width: 268px;
+        
+    }
+    
+    
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width:768px),
+screen and (min-resolution: 192dpi) and (min-width:768px),
+screen and (min-resolution: 2dppx) and (min-width:768px) {
+    .hero-container {
+        background-image: url(../img/Hero/bg-banana-tablet@2x.png), url(../img/Hero/bg-strawberry-tablet@2x.png);
+    }
+}
+/* 1280px - */
+@media screen and (min-width:1280px) {
+    .hero-container {
+            background-image: url(../img/Hero/bg-banana.png), url(../img/Hero/bg-strawberry.png);
+            background-size: 183px 124px, 120px 120px;
+            background-position: 205px 190px, 930px 35px;
+            padding-bottom: 150px;
+        }
+    .hero-h1 {
+            width: 898px;
+            height: 198px;
+            font-size: 64px;
+            line-height: 1em;
+    
+        }
+    .hero-main-block {
+        display: flex;
+        flex-direction: row;
+        column-gap: 86px;
+        flex-wrap: nowrap;
+    }
+    .hero-block1-text {
+        width: 222px;
+    }
+    .hero-block1 {
+        margin-top: 408px ;
+        order: 1;
+    }
+    .hero-block2 {
+        order:2;
+    }
+    .hero-block3 {
+        order: 3;
+        margin-top: 336px;
+    }
+    
+   
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width:1280px),
+screen and (min-resolution: 192dpi) and (min-width:1280px),
+screen and (min-resolution: 2dppx) and (min-width:1280px) {
+    .hero-container {
+        background-image: url(../img/Hero/bg-banana@2x.png), url(../img/Hero/bg-strawberry@2x.png);
+        
+    }
+}
+
+
+
+/* 0px - 767px */
+@media screen and (max-width:767px) {}
+
+/* 768 px - */
+@media screen and (min-width:768px) {}
+
+/* 1280px - */
+@media screen and (min-width:1280px) {}
 /* ============== /HERO ================*/
 
 /* ============== HOW IT WORKS ================*/

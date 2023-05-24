@@ -151,7 +151,7 @@
         
 
         <!-- HOW IT WORKS -->
-        <!-- <section class="how" id="how">
+        <section class="how" id="how">
             <div class="container how-container">
                 <h2 class="how-h2">To order your fruit basket, simply follow these easy steps</h2>
                 <p class="how-p">Our baskets are assembled with care and delivered straight to your doorstep, so you can enjoy the
@@ -192,13 +192,16 @@
                         </ul>
                     </li>
                 </ul>
-                <img class="how-img" src="./img/How/main.gif" alt="fruit gif">
+                <div class="how-img">
+                    <img class="how-img-gif" src="./img/How/main.gif" alt="fruit gif">
+                </div>
+                
             </div>
-        </section> -->
+        </section>
         
 
         <!-- FRUITS -->
-        <!-- <section class="fruits" id="fruits">
+        <section class="fruits" id="fruits">
             <div class="container fruits-container">
                 <h2 class="fruits-h2">Organic fruits</h2>
                 <p class="fruits-p">Our organic fruits are hand-picked from local farms and delivered straight to your doorstep, ensuring that you get the
@@ -268,18 +271,43 @@
                     </svg>
                     order</button>
             </div>
-        </section> -->
+        </section>
         
 
 
         
         <!-- CONTACTS -->
-        <!-- <section class="contacts" id="contacts">
+        <section class="contacts" id="contacts">
             <div class="container contacts-container">
                 <h2 class="contacts-h2">Fresh Harvest Box has got you covered</h2>
                 <div class="contacts-block">
-                    <img class="contacts-block_big" src="./img/Contacts/big_img.png" alt="Melon">
-                    <img class="contacts-block_small" src="./img/Contacts/small_img.png" alt="Bilberry">
+                    <picture>
+                        <source srcset="./img/Contacts/big_img.webp 1x,./img/Contacts/big_img@2x.webp 2x" media="(min-width:1280px)"
+                            type="image/webp">
+                        <source srcset="./img/Contacts/big_img.png 1x,./img/Contacts/big_img@2x.png 2x" media="(min-width:1280px)">
+                        <source srcset="./img/Contacts/big_img-tablet.webp 1x,./img/Contacts/big_img-tablet@2x.webp 2x" media="(min-width:768px)"
+                            type="image/webp">
+                        <source srcset="./img/Contacts/big_img-tablet.png 1x,./img/Contacts/big_img-tablet@2x.png 2x" media="(min-width:768px)">
+                        <source srcset="./img/Contacts/big_img-mob.webp 1x,./img/Contacts/big_img-mob@2x.webp 2x" media="(max-width:767px)"
+                            type="image/webp">
+                        <source srcset="./img/Contacts/big_img-mob.png 1x,../img/Contacts/big_img-mob@2x.png 2x" media="(max-width:767px)">
+                    
+                        <img class="contacts-block_big" srcset="./img/Contacts/big_img@2x.png 2x" src="./img/Contacts/big_img.png" alt="Melon">
+                    </picture>
+                    
+                    <picture>
+                        <source srcset="./img/Contacts/small_img.webp 1x,./img/Contacts/small_img@2x.webp 2x" media="(min-width:1280px)"
+                            type="image/webp">
+                        <source srcset="./img/Contacts/small_img.png 1x,./img/Contacts/small_img@2x.png 2x" media="(min-width:1280px)">
+                        <source srcset="./img/Contacts/small_img-tablet.webp 1x,./img/Contacts/small_img-tablet@2x.webp 2x"
+                            media="(min-width:768px)" type="image/webp">
+                        <source srcset="./img/Contacts/small_img-tablet.png 1x,./img/Contacts/small_img-tablet@2x.png 2x"
+                            media="(min-width:768px)">
+                    
+                    <img class="contacts-block_small" srcset="./img/Contacts/small_img@2x.png 2x" src="./img/Contacts/small_img.png"
+                        alt="Bilberry">
+                    </picture>
+                    
                 </div>
                 <form class="contacts-form">
                     <p class="contacts-form-p">Our boxes are packed with delicious, nutritious fruits and vegetables, perfect for
@@ -293,19 +321,19 @@
                     </div>
                 </form>
             </div>
-        </section> -->
+        </section>
         
     </main>
 
 
     <!-- FOOTER -->
-<!-- <footer>
+<footer>
     <div class="container footer-container">
         <ul class="footer-list list">
             <li class="footer-list-item">
                 <ul class="footer-list_left list">
                     <li class="footer-list_left-item">
-                        <img src="./img/Footer/logo.png" alt="Logo image">
+                        <img class="logo_img" src="./img/Footer/logo.png" alt="Logo image">
                         <a href="./index.html" class="logo link">
                             <svg class="logo-icon" width="16" height="16">
                                 <use href="./img/sprite.svg#icon-logo"></use>
@@ -373,11 +401,11 @@
             </li>
         </ul>
     </div>
-</footer> -->
+</footer>
     <!-- MODAL -->
    
         <!-- MODAL YOUR ORDER -->
-    <!-- <div class="modal" data-modal="1">
+    <div class="modal" data-modal="1">
         <div class="modal-order" >
             <button type="button" class="modal-order-btn js-modal-close">
                 <svg width="28" height="28">
@@ -426,11 +454,11 @@
 
             
         </div>
-    </div> -->
+    </div>
 
 
         <!-- MODAL THANK YOU -->
-    <!-- <div class="modal" data-modal="2">
+    <div class="modal" data-modal="2">
         <div class="modal-thank">
             <button type="button" class="modal-thank-btn js-modal-close">
                 <svg width="28" height="28">
@@ -447,7 +475,7 @@
         </div>
     </div>
 
-    <div class="overlay js-overlay-modal"></div> -->
+    <div class="overlay js-overlay-modal"></div>
 <script src="./js/modal.js"></script>
 <script src="./js/menu.js"></script>
 </body>

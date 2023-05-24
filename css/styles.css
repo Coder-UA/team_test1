@@ -1541,6 +1541,7 @@ screen and (min-resolution: 2dppx) and (min-width:1280px) {
 .overlay {
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
 
     position: fixed;
     top: 0;
@@ -1554,6 +1555,7 @@ screen and (min-resolution: 2dppx) and (min-width:1280px) {
 .modal {
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
 }
 /* ========== MODAL YOUR ORDER ===========*/
 
@@ -1851,7 +1853,6 @@ screen and (min-resolution: 2dppx) and (min-width:1280px) {
 @media screen and (max-width:767px) {
     .modal-thank {
         max-width: 335px;
-        overflow-y: auto;
     }
     .modal-thank-img {
         margin-top: 40px;
@@ -1875,7 +1876,6 @@ screen and (min-resolution: 2dppx) and (min-width:1280px) {
     .modal-thank {
         max-width: 600px;
         min-height: 486px;
-        overflow-y: auto;
     }
     .modal-thank-img {
         margin-top: 68px;
@@ -1900,6 +1900,7 @@ screen and (min-resolution: 2dppx) and (min-width:1280px) {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        margin: 0;
     }
 }
 
